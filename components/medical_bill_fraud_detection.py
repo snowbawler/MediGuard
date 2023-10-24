@@ -7,14 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1Cf5GXeE-VakANMA4zx6dvZRSUdC7eZEY
 """
 import pandas as pd
+import tensorflow as tf
 
 import category_encoders as ce
 from sklearn.preprocessing import StandardScaler
 
 #filter warnings
 import warnings
-
-'''def ML():
+'''
+def ML():
   warnings.filterwarnings("ignore")
 
   pd.set_option("display.max_rows",None)

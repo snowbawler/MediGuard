@@ -6,7 +6,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import joblib
-import tensorflow as tf
 
 #for data preprocessing
 from sklearn.decomposition import PCA
@@ -20,15 +19,16 @@ import warnings
 
 from components.sidebar import sidebar
 from components.uploadData import dataTab
-from components.medical_bill_fraud_detection import ML, preprocessing, removeComma
+#from components.medical_bill_fraud_detection import preprocessing, removeComma
 
-ae = joblib.load("components/model_filename.pkl")
-y_scores = pd.Series(ae.decision_scores_)
-risk = 0
+#ae = joblib.load("components/model_filename.pkl")
+#y_scores = pd.Series(ae.decision_scores_)
+#risk = 0
 st.set_page_config(page_title="MediGuard", page_icon="📖", layout="wide")
 st.markdown("<h1 style='text-align: center;'>📖 MediGuard</h1>", unsafe_allow_html=True)
 
-provider_first, provider_last, submitted_charge, has_med, med_payment, HCPCS = dataTab()
+#provider_first, provider_last, submitted_charge, has_med, med_payment, HCPCS = 
+dataTab()
 sidebar()
 
 with open("form_submit_state.txt", "r") as file:
@@ -89,5 +89,5 @@ def runModel(ae, y_scores, pF, pL, sC, hM, mP):
         return 0 #Low Risk
 
 if form_submit_state == "pressed":
-    risk = runModel(ae, y_scores, provider_first, provider_last, submitted_charge, has_med, med_payment)
-
+    #risk = runModel(ae, y_scores, provider_first, provider_last, submitted_charge, has_med, med_payment)
+    pass

@@ -4,9 +4,9 @@ def sidebar():
     with st.sidebar:
         st.markdown(
             "## How to use\n"
-            "1. ..."
-            "2. Upload an IMG, JPEG, or PNG file📄\n"
-            "3. Ask a question about the document💬\n"
+            "1. Upload an IMG, JPEG, or PNG file📄\n"
+            "2. Scan and check Info tab for accuracy\n"
+            "3. Submit and check for fraud💬\n"
         )
 
         st.markdown("---")
@@ -21,7 +21,7 @@ def sidebar():
             " MediGuard autonomously identifies suspicious patterns"
             " and anomalies in medical bills and reports cost accuracy."
         )
-        st.markdown("Made by [mmz_001](https://twitter.com/mm_sasmitha)")
+        st.markdown("Made by [snowbawler](https://github.com/snowbawler)")
         st.markdown("---")
 
         #faq()

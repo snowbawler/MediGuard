@@ -19,7 +19,7 @@ def dataTab():
     HCPCSI = 0
     uploadTab, inputTab = st.tabs(["Upload","Info"])
 
-    st.markdown(
+    '''st.markdown(
         """
         <style>
             /* Center the text within the button */
@@ -31,7 +31,7 @@ def dataTab():
         </style>
         """,
         unsafe_allow_html=True
-    )  
+    )  '''
     with uploadTab:
         uploaded_file = st.file_uploader(
             "Upload a png, pdf, or jpeg file",
@@ -55,7 +55,7 @@ def dataTab():
                 st.write("Prescribed Medication")
                 has_med = st.checkbox('Yes')
                 med_payment = st.number_input("Medicare Payment")
-                HCPCS = st.number_input("Medicare Payment")
+                #HCPCS = st.number_input("Medicare Payment")
                 if st.form_submit_button():
                     with open("form_submit_state.txt", "w") as file:
                         file.write("pressed")
@@ -67,7 +67,7 @@ def dataTab():
                 st.write("Has Medicare")
                 has_med = st.checkbox('Yes')
                 med_payment = st.number_input("Medicare Payment", med_paymentI)
-                HCPCS = st.number_input("Medicare Payment", HCPCSI)
+                #HCPCS = st.number_input("Medicare Payment", HCPCSI)
                 if st.form_submit_button():
                     with open("form_submit_state.txt", "w") as file:
                         file.write("pressed")
